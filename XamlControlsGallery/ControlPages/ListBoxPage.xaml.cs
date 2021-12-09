@@ -9,6 +9,7 @@
 //*********************************************************
 using System;
 using System.Collections.Generic;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 
@@ -54,7 +55,7 @@ namespace AppUIBasics.ControlPages
             }
         }
 
-        private void ListBox2_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+        private void ListBox2_Loaded(object sender, RoutedEventArgs e)
         {
             ListBox2.SelectedIndex = 2;
         }
