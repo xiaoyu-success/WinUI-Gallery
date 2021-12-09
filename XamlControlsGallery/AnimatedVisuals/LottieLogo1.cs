@@ -10,8 +10,8 @@ using Microsoft.Graphics.Canvas.Geometry;
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Numerics;
-using Windows.UI;
-using Windows.UI.Composition;
+using Microsoft.UI;
+using Microsoft.UI.Composition;
 
 namespace AnimatedVisuals
 {
@@ -29,7 +29,7 @@ namespace AnimatedVisuals
 
         static bool IsRuntimeCompatible()
         {
-            if (!Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Composition.CompositionGeometricClip"))
+            if (!Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Microsoft.UI.Composition.CompositionGeometricClip"))
             {
                 return false;
             }

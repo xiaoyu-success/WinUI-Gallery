@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
-using Windows.UI;
-using Windows.UI.ViewManagement;
-using Windows.UI.Xaml;
+using Microsoft.UI;
+using Microsoft.UI.ViewManagement;
+using Microsoft.UI.Xaml;
 
 namespace AppUIBasics.Helper
 {

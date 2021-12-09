@@ -1,7 +1,7 @@
-﻿using Windows.UI.Core;
-using Windows.UI.Input.Inking;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+﻿using Microsoft.UI.Core;
+using Microsoft.UI.Input.Inking;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
 namespace AppUIBasics.ControlPages
 {

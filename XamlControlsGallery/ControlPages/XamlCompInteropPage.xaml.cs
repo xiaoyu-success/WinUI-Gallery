@@ -1,12 +1,12 @@
 using System;
 using System.Numerics;
 using Windows.Foundation.Metadata;
-using Windows.UI.Composition;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Automation;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Input;
+using Microsoft.UI.Composition;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Automation;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Input;
 
 namespace AppUIBasics.ControlPages
 {
@@ -52,7 +52,7 @@ namespace AppUIBasics.ControlPages
             return TimeSpan.FromMilliseconds(PeriodSlider.Value);
         }
 
-        private void StartAnimationIfAPIPresent(UIElement sender, Windows.UI.Composition.CompositionAnimation animation)
+        private void StartAnimationIfAPIPresent(UIElement sender, Microsoft.UI.Composition.CompositionAnimation animation)
         {
             if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 7))
             {
@@ -154,7 +154,7 @@ namespace AppUIBasics.ControlPages
             }
         }
 
-        private void RadiusSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        private void RadiusSlider_ValueChanged(object sender, Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
         {
             if (LayoutPanel == null) return;
             LayoutPanel.Width = LayoutPanel.Height = e.NewValue;

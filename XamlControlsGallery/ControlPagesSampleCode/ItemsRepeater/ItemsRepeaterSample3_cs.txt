@@ -3,7 +3,7 @@
 // Initialization code
 
 private double AnimatedBtnHeight;
-private Windows.UI.Xaml.Thickness AnimatedBtnMargin;
+private Microsoft.UI.Xaml.Thickness AnimatedBtnMargin;
 
 private void InitializeData()
 {

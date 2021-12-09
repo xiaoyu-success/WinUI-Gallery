@@ -1,12 +1,11 @@
 using System;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
 using AppUIBasics.SamplePages;
 using Windows.ApplicationModel.Core;
-using Windows.UI.Xaml;
-using Windows.UI.ViewManagement;
-using Windows.UI.Core;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.ViewManagement;
+using Microsoft.UI.Core;
 using AppUIBasics.TabViewPages;
 using System.Collections.ObjectModel;
 
@@ -239,7 +238,7 @@ namespace AppUIBasics.ControlPages
             TabView4.CloseButtonOverlayMode = overlayMode;
         }
 
-        private async void TabViewWindowingButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void TabViewWindowingButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
             CoreApplicationView newView = CoreApplication.CreateNewView();
             int newViewId = 0;

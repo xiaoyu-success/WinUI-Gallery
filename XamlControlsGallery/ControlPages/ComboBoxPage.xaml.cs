@@ -10,9 +10,9 @@
 using System;
 using System.Collections.Generic;
 using Windows.Foundation.Metadata;
-using Windows.UI;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
+using Microsoft.UI;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
 
 namespace AppUIBasics.ControlPages
 {
@@ -72,12 +72,12 @@ namespace AppUIBasics.ControlPages
             Control1Output.Fill = new SolidColorBrush(color);
         }
 
-        private void Combo2_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void Combo2_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
             Combo2.SelectedIndex = 2;
         }
 
-        private void Combo3_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void Combo3_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
             Combo3.SelectedIndex = 2;
 

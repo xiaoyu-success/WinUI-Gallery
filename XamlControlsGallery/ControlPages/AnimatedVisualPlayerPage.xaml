@@ -17,12 +17,12 @@
                     <!-- Text -->
                     <TextBlock TextWrapping="WrapWholeWords">
                         This AnimatedVisualPlayer consumes an animation created using 
-                        Adobe AfterEffects and translated into Windows.UI.Composition objects using 
+                        Adobe AfterEffects and translated into Microsoft.UI.Composition objects using 
                         <Hyperlink NavigateUri="https://aka.ms/lottie">
                            Lottie-Windows
                         </Hyperlink>.
                         Since the 
-                        <Hyperlink NavigateUri="https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionshape">
+                        <Hyperlink NavigateUri="https://docs.microsoft.com/uwp/api/microsoft.ui.composition.compositionshape">
                             CompositionShapes
                         </Hyperlink> used here are supported on Windows 10 version 17763+, 
                         the AnimatedVisualPlayer falls back to an Image when its Source is unavailable.

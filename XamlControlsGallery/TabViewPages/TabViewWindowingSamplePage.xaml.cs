@@ -4,12 +4,12 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation.Metadata;
-using Windows.UI.ViewManagement;
-using Windows.UI.WindowManagement;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Hosting;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.ViewManagement;
+using Microsoft.UI.WindowManagement;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Hosting;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace AppUIBasics.TabViewPages
 {
@@ -67,8 +67,8 @@ namespace AppUIBasics.TabViewPages
                 coreTitleBar.LayoutMetricsChanged += CoreTitleBar_LayoutMetricsChanged;
 
                 var titleBar = ApplicationView.GetForCurrentView().TitleBar;
-                titleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
-                titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent;
+                titleBar.ButtonBackgroundColor = Microsoft.UI.Colors.Transparent;
+                titleBar.ButtonInactiveBackgroundColor = Microsoft.UI.Colors.Transparent;
 
                 Window.Current.SetTitleBar(CustomDragRegion);
             }
@@ -79,8 +79,8 @@ namespace AppUIBasics.TabViewPages
 
                 // Extend into the titlebar
                 window.TitleBar.ExtendsContentIntoTitleBar = true;
-                window.TitleBar.ButtonBackgroundColor = Windows.UI.Colors.Transparent;
-                window.TitleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.Transparent;
+                window.TitleBar.ButtonBackgroundColor = Microsoft.UI.Colors.Transparent;
+                window.TitleBar.ButtonInactiveBackgroundColor = Microsoft.UI.Colors.Transparent;
 
                 // Due to a bug in AppWindow, we cannot follow the same pattern as CoreWindow when setting the min width.
                 // Instead, set a hardcoded number. 
