@@ -5,7 +5,6 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:l="using:AppUIBasics.ControlPages"
     xmlns:common="using:AppUIBasics.Common"
     mc:Ignorable="d" FontFamily="Segoe UI">
@@ -57,22 +56,22 @@
         <DataTemplate x:Key="CategoryTemplate" x:DataType="l:NestedCategory">
             <StackPanel>
                 <TextBlock Text="{x:Bind CategoryName}" Padding="8" Style="{StaticResource TitleTextBlockStyle}"/>
-                <muxc:ItemsRepeater x:Name="innerRepeater"
+                <ItemsRepeater x:Name="innerRepeater"
                                     ItemsSource="{x:Bind CategoryItems}"
                                     ItemTemplate="{StaticResource StringDataTemplate}">
-                    <muxc:ItemsRepeater.Layout>
-                        <muxc:StackLayout Orientation="Horizontal" />
-                    </muxc:ItemsRepeater.Layout>
-                </muxc:ItemsRepeater>
+                    <ItemsRepeater.Layout>
+                        <StackLayout Orientation="Horizontal" />
+                    </ItemsRepeater.Layout>
+                </ItemsRepeater>
             </StackPanel>
         </DataTemplate>
 
-        <muxc:StackLayout x:Name="VerticalStackLayout" Orientation="Vertical" Spacing="8"/>
-        <muxc:StackLayout x:Name="HorizontalStackLayout" Orientation="Horizontal" Spacing="8"/>
-        <muxc:UniformGridLayout x:Name="UniformGridLayout" MinRowSpacing="8" MinColumnSpacing="8"/>
+        <StackLayout x:Name="VerticalStackLayout" Orientation="Vertical" Spacing="8"/>
+        <StackLayout x:Name="HorizontalStackLayout" Orientation="Horizontal" Spacing="8"/>
+        <UniformGridLayout x:Name="UniformGridLayout" MinRowSpacing="8" MinColumnSpacing="8"/>
 
         <common:ActivityFeedLayout x:Key="MyFeedLayout" ColumnSpacing="12" RowSpacing="12" MinItemSize="80, 108"/>
-        <muxc:UniformGridLayout x:Key="UniformGridLayout2" MinItemWidth="108" MinItemHeight="108" MinRowSpacing="12" MinColumnSpacing="12"/>
+        <UniformGridLayout x:Key="UniformGridLayout2" MinItemWidth="108" MinItemHeight="108" MinRowSpacing="12" MinColumnSpacing="12"/>
 
         <DataTemplate x:DataType="l:Recipe" x:Key="RecipeTemplate">
             <StackPanel BorderThickness="1" Background="{ThemeResource SystemControlBackgroundBaseLowBrush}" Margin="5">
@@ -106,7 +105,7 @@
                           HorizontalScrollMode="Auto" 
                           IsVerticalScrollChainingEnabled="False"
                           MaxHeight="500">
-                <muxc:ItemsRepeater x:Name="repeater"
+                <ItemsRepeater x:Name="repeater"
                                Layout="{StaticResource VerticalStackLayout}"
                                ItemsSource="{x:Bind BarItems}"
                                ItemTemplate="{StaticResource HorizontalBarTemplate}"/>
@@ -116,7 +115,7 @@
                     <Button x:Name="AddBtn" Content="Add Item" Click="AddBtn_Click" MinWidth="150"/>
                     <Button x:Name="DeleteBtn" Content="Remove Item" Click="DeleteBtn_Click" MinWidth="150"/>
 
-                    <muxc:RadioButtons Header="Layout" SelectionChanged="RadioBtn_Click">
+                    <RadioButtons Header="Layout" SelectionChanged="RadioBtn_Click">
                         <RadioButton x:Name="VStackBtn" 
                                      Content="StackLayout - Vertical"
                                      Tag="VerticalStackLayout"
@@ -127,7 +126,7 @@
                         <RadioButton x:Name="HGridBtn"
                                      Content="UniformGridLayout"
                                      Tag="UniformGridLayout"/>
-                    </muxc:RadioButtons>
+                    </RadioButtons>
                 </StackPanel>
             </local:ControlExample.Options>
 
@@ -139,7 +138,7 @@
         HorizontalScrollMode="Auto" 
         IsVerticalScrollChainingEnabled="False"
         MaxHeight="500"&gt;
-    &lt;muxc:ItemsRepeater
+    &lt;ItemsRepeater
         ItemsSource="{x:Bind BarItems}"
         Layout="{StaticResource $(Layout)}"
         ItemTemplate="{StaticResource $(ElementGenerator)}" /&gt;
@@ -172,19 +171,19 @@ the following attributes: Height, MaxHeight, Length, MaxLength, Diameter, and Ma
 
             <!-- ItemsRepeaterScrollHost enables ItemsRepeater to coordinate with ScrollViewer down-level.
                  It's not needed on 17700+ builds. -->
-            <muxc:ItemsRepeaterScrollHost>
+            <ItemsRepeaterScrollHost>
                 <ScrollViewer x:Name="scrollViewer"
                               Height="400"
                               IsVerticalScrollChainingEnabled="False"
                               Padding="0,0,16,0">
 
-                    <muxc:ItemsRepeater x:Name="repeater2" 
+                    <ItemsRepeater x:Name="repeater2" 
                                        Margin="0,0,12,0"
                                        HorizontalAlignment="Stretch"
                                        Layout="{StaticResource MyFeedLayout}"
                                        ItemTemplate="{StaticResource MyDataTemplateSelector}"/>
                 </ScrollViewer>
-            </muxc:ItemsRepeaterScrollHost>
+            </ItemsRepeaterScrollHost>
 
             <local:ControlExample.Options>
                 <StackPanel Spacing="12">
@@ -205,28 +204,28 @@ the following attributes: Height, MaxHeight, Length, MaxLength, Diameter, and Ma
                               CSharpSource="ItemsRepeater/ItemsRepeaterSample1_cs.txt">
             <StackPanel>
                 <TextBlock Text="This is an ItemsRepeater that displays both integer and string items. It uses a DataTemplateSelector to choose the correct layout for each of its items." TextWrapping="Wrap"/>
-                <muxc:ItemsRepeater x:Name="MixedTypeRepeater" 
+                <ItemsRepeater x:Name="MixedTypeRepeater" 
                                            Margin="0,0,12,0"
                                            HorizontalAlignment="Stretch"
                                            ItemTemplate="{StaticResource StringOrIntTemplateSelector}">
 
-                    <muxc:ItemsRepeater.Layout>
-                        <muxc:UniformGridLayout MinItemWidth="200" MinItemHeight="200"></muxc:UniformGridLayout>
-                    </muxc:ItemsRepeater.Layout>
-                </muxc:ItemsRepeater>
+                    <ItemsRepeater.Layout>
+                        <UniformGridLayout MinItemWidth="200" MinItemHeight="200"></UniformGridLayout>
+                    </ItemsRepeater.Layout>
+                </ItemsRepeater>
             </StackPanel>
         </local:ControlExample>
 
         <local:ControlExample HeaderText="Laying out nested ItemsRepeaters"
                               XamlSource="ItemsRepeater/ItemsRepeaterNestedSample_xaml.txt">
             <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto">
-                <muxc:ItemsRepeater x:Name="outerRepeater"
+                <ItemsRepeater x:Name="outerRepeater"
                                            VerticalAlignment="Top"
                                            ItemTemplate ="{StaticResource CategoryTemplate}">
-                    <muxc:ItemsRepeater.Layout>
-                        <muxc:StackLayout Orientation="Vertical" />
-                    </muxc:ItemsRepeater.Layout>
-                </muxc:ItemsRepeater>
+                    <ItemsRepeater.Layout>
+                        <StackLayout Orientation="Vertical" />
+                    </ItemsRepeater.Layout>
+                </ItemsRepeater>
             </ScrollViewer>
         </local:ControlExample>
 
@@ -243,7 +242,7 @@ the following attributes: Height, MaxHeight, Length, MaxLength, Diameter, and Ma
                               Grid.Column="0"
                               Height="175"
                               Width="250">
-                    <muxc:ItemsRepeater x:Name="animatedScrollRepeater">
+                    <ItemsRepeater x:Name="animatedScrollRepeater">
                             <DataTemplate x:DataType="x:String">
                             <Button Content="{x:Bind}"
                                         Background="{x:Bind}"
@@ -254,7 +253,7 @@ the following attributes: Height, MaxHeight, Length, MaxLength, Diameter, and Ma
                                         Foreground="{ThemeResource TextFillColorInverseBrush}">
                             </Button>
                         </DataTemplate>
-                    </muxc:ItemsRepeater>
+                    </ItemsRepeater>
                 </ScrollViewer>
 
                 <Rectangle x:Name="colorRectangle"
@@ -275,15 +274,15 @@ the following attributes: Height, MaxHeight, Length, MaxLength, Diameter, and Ma
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <muxc:ItemsRepeaterScrollHost x:Name="tracker" Grid.Column="0">
+                <ItemsRepeaterScrollHost x:Name="tracker" Grid.Column="0">
                     <ScrollViewer>
-                        <muxc:ItemsRepeater x:Name="VariedImageSizeRepeater" ItemTemplate="{StaticResource RecipeTemplate}">
-                            <muxc:ItemsRepeater.Layout>
+                        <ItemsRepeater x:Name="VariedImageSizeRepeater" ItemTemplate="{StaticResource RecipeTemplate}">
+                            <ItemsRepeater.Layout>
                                 <common:VariedImageSizeLayout Width="200"/>
-                            </muxc:ItemsRepeater.Layout>
-                        </muxc:ItemsRepeater>
+                            </ItemsRepeater.Layout>
+                        </ItemsRepeater>
                     </ScrollViewer>
-                </muxc:ItemsRepeaterScrollHost>
+                </ItemsRepeaterScrollHost>
 
                 <StackPanel Grid.Column="1" Margin="10,0,0,0">
                     <TextBox x:Name="FilterRecipes" Header="Filter by ingredient..." Width="200"

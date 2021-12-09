@@ -5,7 +5,6 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <StackPanel>
@@ -19,7 +18,7 @@
                             </DataTemplate>
                         </FlipView.ItemTemplate>
                     </FlipView>
-                    <muxc:PipsPager x:Name="FlipViewPipsPager"
+                    <PipsPager x:Name="FlipViewPipsPager"
                         HorizontalAlignment="Center"
                         Margin="0, 12, 0, 0"
                         NumberOfPages="{x:Bind Pictures.Count}"
@@ -36,7 +35,7 @@
             &lt;/DataTemplate&gt;
         &lt;/FlipView.ItemTemplate&gt;
     &lt;/FlipView&gt;
-    &lt;muxc:PipsPager x:Name="FlipViewPipsPager"                   
+    &lt;PipsPager x:Name="FlipViewPipsPager"                   
         HorizontalAlignment="Center"
         Margin="0, 12, 0, 0"
         NumberOfPages="{x:Bind Pictures.Count}"
@@ -47,7 +46,7 @@
         </local:ControlExample>
         <local:ControlExample x:Name="Example2" HeaderText="PipsPager with options to change its orientation and button visibility.">
             <local:ControlExample.Example>
-                <muxc:PipsPager x:Name="TestPipsPager2"/>
+                <PipsPager x:Name="TestPipsPager2"/>
             </local:ControlExample.Example>
             <local:ControlExample.Options>
                 <StackPanel>
@@ -69,7 +68,7 @@
             </local:ControlExample.Options>
             <local:ControlExample.Xaml>
                 <x:String xml:space="preserve">
-&lt;muxc:PipsPager
+&lt;PipsPager
     Orientation="$(Orientation)"
     PreviousButtonVisibility="$(PrevButton)"
     NextButtonVisibility="$(NextButton)" /&gt;

@@ -5,7 +5,6 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
     <Page.Resources>
         <Style TargetType="FlyoutPresenter" x:Name="FlyoutPresenterStyle">
@@ -19,7 +18,7 @@
 
             <local:ControlExample.Options>
                 <StackPanel>
-                    <muxc:NumberBox x:Name="OpacityNumberBox" Header="Opacity (0.0 to 1.0)" 
+                    <NumberBox x:Name="OpacityNumberBox" Header="Opacity (0.0 to 1.0)" 
                                     Value="0.5" Margin="5" Maximum="1" Minimum="0"  KeyDown="NumberBox_KeyDown"/>
                     <Button Content="Set Opacity" Margin="5" Click="OpacityButton_Click" HorizontalAlignment="Stretch" />
                 </StackPanel>
@@ -60,7 +59,7 @@ private void button_Click(object sender, RoutedEventArgs e)
 
             <local:ControlExample.Options>
                 <StackPanel>
-                    <muxc:NumberBox x:Name="RotationNumberBox" Header="Rotation (0.0 to 360.0)" Value="45" Margin="5" 
+                    <NumberBox x:Name="RotationNumberBox" Header="Rotation (0.0 to 360.0)" Value="45" Margin="5" 
                                     Minimum="0" Maximum="360"  KeyDown="NumberBox_KeyDown"/>
                     <Button Content="Set Rotation" Margin="5" Click="RotationButton_Click" HorizontalAlignment="Stretch"/>
                 </StackPanel>
@@ -101,7 +100,7 @@ private void button_Click(object sender, RoutedEventArgs e)
                     <CheckBox x:Name="ScaleX" Content="Animate X" IsChecked="True" />
                     <CheckBox x:Name="ScaleY" Content="Animate Y" IsChecked="True" />
                     <CheckBox x:Name="ScaleZ" Content="Animate Z" IsChecked="True" />
-                    <muxc:NumberBox x:Name="ScaleNumberBox" Header="Scale (0.0 to 5.0)" Value="1" 
+                    <NumberBox x:Name="ScaleNumberBox" Header="Scale (0.0 to 5.0)" Value="1" 
                                     Minimum="0" Maximum="5" Margin="5" KeyDown="NumberBox_KeyDown" />
                     <Button Content="Set custom scale" Click="ScaleButton_Click" Margin="5" HorizontalAlignment="Stretch" />
                 </StackPanel>
@@ -143,7 +142,7 @@ private void button_Click(object sender, RoutedEventArgs e)
                     <CheckBox x:Name="TranslateX" Content="Animate X" IsChecked="True" />
                     <CheckBox x:Name="TranslateY" Content="Animate Y" IsChecked="True" />
                     <CheckBox x:Name="TranslateZ" Content="Animate Z" IsChecked="True" />
-                    <muxc:NumberBox x:Name="TranslationNumberBox" Header="Translation (0.0 to 200.0)" Value="1"
+                    <NumberBox x:Name="TranslationNumberBox" Header="Translation (0.0 to 200.0)" Value="1"
                                     Minimum="0" Maximum="200" Margin="5" KeyDown="NumberBox_KeyDown" />
                     <Button Content="Set custom Translation" Margin="5" Click="TranslateButton_Click" HorizontalAlignment="Stretch" />
                 </StackPanel>

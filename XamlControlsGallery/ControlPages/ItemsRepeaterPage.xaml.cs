@@ -93,7 +93,7 @@ namespace AppUIBasics.ControlPages
             outerRepeater.ItemsSource = nestedCategories;
 
             // Set sample code to display on page's initial load
-            SampleCodeLayout.Value = @"<muxc:StackLayout x:Name=""VerticalStackLayout"" Orientation=""Vertical"" Spacing=""8""/>";
+            SampleCodeLayout.Value = @"<StackLayout x:Name=""VerticalStackLayout"" Orientation=""Vertical"" Spacing=""8""/>";
 
             SampleCodeDT.Value = @"<DataTemplate x:Key=""HorizontalBarTemplate"" x:DataType=""l:Bar"">
     <Border Background=""{ThemeResource SystemChromeLowColor}"" Width=""{x:Bind MaxLength}"" >
@@ -176,7 +176,7 @@ namespace AppUIBasics.ControlPages
 
                 repeater.MaxWidth = MaxLength + 12;
 
-                SampleCodeLayout.Value = @"<muxc:StackLayout x:Name=""VerticalStackLayout"" Orientation=""Vertical"" Spacing=""8""/>";
+                SampleCodeLayout.Value = @"<StackLayout x:Name=""VerticalStackLayout"" Orientation=""Vertical"" Spacing=""8""/>";
                 SampleCodeDT.Value = @"<DataTemplate x:Key=""HorizontalBarTemplate"" x:DataType=""l:Bar"">
     <Border Background=""{ThemeResource SystemChromeLowColor}"" Width=""{x:Bind MaxLength}"" >
         <Rectangle Fill=""{ThemeResource SystemAccentColor}"" Width=""{x:Bind Length}""
@@ -189,7 +189,7 @@ namespace AppUIBasics.ControlPages
                 layout.Value = layoutKey;
                 itemTemplateKey = "VerticalBarTemplate";
                 repeater.MaxWidth = 6000;
-                SampleCodeLayout.Value = @"<muxc:StackLayout x:Name=""HorizontalStackLayout"" Orientation=""Horizontal"" Spacing=""8""/> ";
+                SampleCodeLayout.Value = @"<StackLayout x:Name=""HorizontalStackLayout"" Orientation=""Horizontal"" Spacing=""8""/> ";
                 SampleCodeDT.Value = @"<DataTemplate x:Key=""VerticalBarTemplate"" x:DataType=""l:Bar"">
     <Border Background=""{ThemeResource SystemChromeLowColor}"" Height=""{x:Bind MaxHeight}"">
         <Rectangle Fill=""{ThemeResource SystemAccentColor}"" Height=""{x:Bind Height}"" 
@@ -202,7 +202,7 @@ namespace AppUIBasics.ControlPages
                 layout.Value = layoutKey;
                 itemTemplateKey = "CircularTemplate";
                 repeater.MaxWidth = 540;
-                SampleCodeLayout.Value = @"<muxc:UniformGridLayout x:Name=""UniformGridLayout"" MinRowSpacing=""8"" MinColumnSpacing=""8""/>";
+                SampleCodeLayout.Value = @"<UniformGridLayout x:Name=""UniformGridLayout"" MinRowSpacing=""8"" MinColumnSpacing=""8""/>";
                 SampleCodeDT.Value = @"<DataTemplate x:Key=""CircularTemplate"" x:DataType=""l:Bar"">
     <Grid>
         <Ellipse Fill=""{ThemeResource SystemChromeLowColor}"" Height=""{x:Bind MaxDiameter}"" 
@@ -228,7 +228,7 @@ namespace AppUIBasics.ControlPages
             layout2.Value = layoutKey;
             if (layoutKey == "UniformGridLayout2")
             {
-                SampleCodeLayout2.Value = @"<muxc:UniformGridLayout x:Key=""UniformGridLayout2"" MinItemWidth=""108"" MinItemHeight=""108""
+                SampleCodeLayout2.Value = @"<UniformGridLayout x:Key=""UniformGridLayout2"" MinItemWidth=""108"" MinItemHeight=""108""
                    MinRowSpacing=""12"" MinColumnSpacing=""12""/>";
             }
             else if (layoutKey == "MyFeedLayout")

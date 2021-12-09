@@ -1,16 +1,16 @@
-﻿ <muxc:NavigationView>
-    <muxc:NavigationView.MenuItems>
-        <muxc:NavigationViewItem Content = "Game Settings">
-            <muxc:NavigationViewItem.Icon>
-                <muxc:AnimatedIcon x:Name='AnimatedIcon'>
-                    <muxc:AnimatedIcon.Source>
+﻿ <NavigationView>
+    <NavigationView.MenuItems>
+        <NavigationViewItem Content = "Game Settings">
+            <NavigationViewItem.Icon>
+                <AnimatedIcon x:Name='AnimatedIcon'>
+                    <AnimatedIcon.Source>
                         <animatedvisuals:AnimatedSettingsVisualSource/>
-                    </muxc:AnimatedIcon.Source>
-                    <muxc:AnimatedIcon.FallbackIconSource>
-                        <muxc:FontIconSource FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"/>
-                    </muxc:AnimatedIcon.FallbackIconSource>
-                </muxc:AnimatedIcon>
-            </muxc:NavigationViewItem.Icon>
-        </muxc:NavigationViewItem>
-    </muxc:NavigationView.MenuItems>
-</muxc:NavigationView>
+                    </AnimatedIcon.Source>
+                    <AnimatedIcon.FallbackIconSource>
+                        <FontIconSource FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"/>
+                    </AnimatedIcon.FallbackIconSource>
+                </AnimatedIcon>
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+    </NavigationView.MenuItems>
+</NavigationView>

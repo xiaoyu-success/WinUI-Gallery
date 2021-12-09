@@ -5,7 +5,6 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <StackPanel>
@@ -17,12 +16,12 @@
 
             <local:ControlExample.Options>
                 <StackPanel>
-                    <muxc:RadioButtons x:Name="DampingStackPanel" Header="Damping Ratio">
+                    <RadioButtons x:Name="DampingStackPanel" Header="Damping Ratio">
                         <RadioButton Content="0.2" />
                         <RadioButton Content="0.4" />
                         <RadioButton Content="0.6" IsChecked="True" />
                         <RadioButton Content="0.8" />
-                    </muxc:RadioButtons>
+                    </RadioButtons>
                     <Slider x:Name="PeriodSlider" Header="Period (in ms)" Minimum="25" Maximum="200" TickFrequency="25" Value="50" StepFrequency="25" />
                 </StackPanel>
             </local:ControlExample.Options>

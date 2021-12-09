@@ -14,13 +14,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:contract7Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract,7)"
-      xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
       mc:Ignorable="d">
     
     <StackPanel>
         <local:ControlExample x:Name="Example1" HeaderText="An Expander with text in the header and content areas">
             <local:ControlExample.Example>
-                <muxc:Expander x:Name="Expander1" IsExpanded="False" ExpandDirection="Down" Header="This text is in the header" Content="This is in the content" VerticalAlignment="Top"/>
+                <Expander x:Name="Expander1" IsExpanded="False" ExpandDirection="Down" Header="This text is in the header" Content="This is in the content" VerticalAlignment="Top"/>
             </local:ControlExample.Example>
             <local:ControlExample.Options>
                 <StackPanel>
@@ -33,7 +32,7 @@
 
             <local:ControlExample.Xaml>
                 <x:String xml:space="preserve">
-&lt;muxc:Expander
+&lt;Expander
      IsExpanded="$(IsExpanded)"
      ExpandDirection="$(ExpandDirection)"
      VerticalAlignment="$(VerticalAlignment)"
@@ -50,54 +49,54 @@
 
         <local:ControlExample x:Name="Example2" HeaderText="An Expander with other controls in the header and content">
             <local:ControlExample.Example>
-                <muxc:Expander x:Name="Expander2">
-                    <muxc:Expander.Header>
+                <Expander x:Name="Expander2">
+                    <Expander.Header>
                         <ToggleButton Content ="This is a ToggleButton in the header"/>
-                    </muxc:Expander.Header>
-                    <muxc:Expander.Content>
+                    </Expander.Header>
+                    <Expander.Content>
                         <Grid>
                             <Button Margin="15" Content="This is a Button in the content"/>
                         </Grid>
-                    </muxc:Expander.Content>
-                </muxc:Expander>
+                    </Expander.Content>
+                </Expander>
             </local:ControlExample.Example>
             <local:ControlExample.Xaml>
                 <x:String xml:space="preserve">
-&lt;muxc:Expander x:Name="Expander2" &gt;
-    &lt;muxc:Expander.Header&gt;
+&lt;Expander x:Name="Expander2" &gt;
+    &lt;Expander.Header&gt;
         &lt;ToggleButton Content="This is a ToggleButton in the header"/&gt;
-    &lt;/muxc:Expander.Header&gt;
-    &lt;muxc:Expander.Content&gt;
+    &lt;/Expander.Header&gt;
+    &lt;Expander.Content&gt;
         &lt;Grid&gt;
             &lt;Button Margin="15" Content="This is a Button in the content"/&gt;
         &lt;/Grid&gt;
-    &lt;/muxc:Expander.Content&gt;
-&lt;/muxc:Expander&gt;
+    &lt;/Expander.Content&gt;
+&lt;/Expander&gt;
                 </x:String>
             </local:ControlExample.Xaml>
         </local:ControlExample>
         
         <local:ControlExample HeaderText="Modifying Expanders content alignment">
             <local:ControlExample.Example>
-                <muxc:Expander Width="500" HorizontalContentAlignment="Left" Padding="0">
-                    <muxc:Expander.Header>
+                <Expander Width="500" HorizontalContentAlignment="Left" Padding="0">
+                    <Expander.Header>
                         <ToggleButton Content ="This ToggleButton is centered" HorizontalAlignment="Center"/>
-                    </muxc:Expander.Header>
-                    <muxc:Expander.Content>
+                    </Expander.Header>
+                    <Expander.Content>
                         <Button Margin="4" Content="This Button is left aligned"/>
-                    </muxc:Expander.Content>
-                </muxc:Expander>
+                    </Expander.Content>
+                </Expander>
             </local:ControlExample.Example>
             <local:ControlExample.Xaml>
                 <x:String xml:space="preserve">
-&lt;muxc:Expander Width="500" HorizontalContentAlignment="Left" Padding="0"&gt;
-    &lt;muxc:Expander.Header&gt;
+&lt;Expander Width="500" HorizontalContentAlignment="Left" Padding="0"&gt;
+    &lt;Expander.Header&gt;
         &lt;ToggleButton Content="This ToggleButton is centered" HorizontalAlignment="Center"/&gt;
-    &lt;/muxc:Expander.Header&gt;
-    &lt;muxc:Expander.Content&gt;
+    &lt;/Expander.Header&gt;
+    &lt;Expander.Content&gt;
         &lt;Button Margin="4" Content="This Button is left aligned"/&gt;
-    &lt;/muxc:Expander.Content&gt;
-&lt;/muxc:Expander&gt;
+    &lt;/Expander.Content&gt;
+&lt;/Expander&gt;
                 </x:String>
             </local:ControlExample.Xaml>
         </local:ControlExample>

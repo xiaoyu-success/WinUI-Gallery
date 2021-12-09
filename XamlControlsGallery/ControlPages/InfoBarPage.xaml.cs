@@ -90,9 +90,9 @@ namespace AppUIBasics.ControlPages
                 var button = new Button();
                 button.Content = "Action";
                 TestInfoBar2.ActionButton = button;
-                DisplayButton.Value = @"<muxc:InfoBar.ActionButton>
+                DisplayButton.Value = @"<InfoBar.ActionButton>
             <Button Content=""Action"" Click=""InfoBarButton_Click"" />
-    </muxc:InfoBar.ActionButton> ";
+    </InfoBar.ActionButton> ";
 
             }
             else if (ActionButtonComboBox.SelectedIndex == 2) // hyperlink
@@ -101,9 +101,9 @@ namespace AppUIBasics.ControlPages
                 link.NavigateUri = new Uri("http://www.microsoft.com/");
                 link.Content = "Informational link";
                 TestInfoBar2.ActionButton = link;
-                DisplayButton.Value = @"<muxc:InfoBar.ActionButton>
+                DisplayButton.Value = @"<InfoBar.ActionButton>
             <HyperlinkButton Content=""Informational link"" NavigateUri=""https://www.example.com"" />
-    </muxc:InfoBar.ActionButton>";
+    </InfoBar.ActionButton>";
             }
         }
     }

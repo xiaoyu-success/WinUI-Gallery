@@ -16,11 +16,10 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
     <StackPanel>
         <local:ControlExample HeaderText="An indeterminate progress ring.">
-            <muxc:ProgressRing IsActive="{x:Bind ProgressToggle.IsOn, Mode=OneWay}" AutomationProperties.Name="Progress image" Height="60" Width="60" VerticalAlignment="Top" Margin="10,10,0,0"/>
+            <ProgressRing IsActive="{x:Bind ProgressToggle.IsOn, Mode=OneWay}" AutomationProperties.Name="Progress image" Height="60" Width="60" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <local:ControlExample.Options>
                 <StackPanel>
                     <ToggleSwitch x:Name="ProgressToggle" AutomationProperties.Name="Progress options" Header="Toggle work" OffContent="Do work" OnContent="Working" IsOn="True" />
@@ -28,7 +27,7 @@
             </local:ControlExample.Options>
             <local:ControlExample.Xaml>
                 <x:String>
-                    &lt;muxc:ProgressRing IsActive="$(IsActive)" /&gt;
+                    &lt;ProgressRing IsActive="$(IsActive)" /&gt;
                 </x:String>
             </local:ControlExample.Xaml>
             <local:ControlExample.Substitutions>
@@ -37,8 +36,8 @@
         </local:ControlExample>
         <local:ControlExample HeaderText="A determinate progress ring.">
             <StackPanel x:Name="Control2" Orientation="Horizontal">
-                <muxc:ProgressRing Width="60" Height="60" x:Name="ProgressRing2" AutomationProperties.Name="Progress image" IsIndeterminate="False" Margin="0,0,60,0"/>
-                <muxc:NumberBox x:Name="ProgressValue"
+                <ProgressRing Width="60" Height="60" x:Name="ProgressRing2" AutomationProperties.Name="Progress image" IsIndeterminate="False" Margin="0,0,60,0"/>
+                <NumberBox x:Name="ProgressValue"
                                 AutomationProperties.Name="Progress amount"
                                 Value="0" Minimum="0" Maximum="100"
                                 SpinButtonPlacementMode="Inline"
@@ -49,7 +48,7 @@
             </StackPanel>
             <local:ControlExample.Xaml>
                 <x:String>
-                    &lt;muxc:ProgressRing Width="60" Height="60" Value="$(DeterminateProgressValue)" IsIndeterminate="False"/&gt;
+                    &lt;ProgressRing Width="60" Height="60" Value="$(DeterminateProgressValue)" IsIndeterminate="False"/&gt;
                 </x:String>
             </local:ControlExample.Xaml>
             <local:ControlExample.Substitutions>

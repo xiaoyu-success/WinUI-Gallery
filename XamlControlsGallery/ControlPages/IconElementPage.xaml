@@ -6,7 +6,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     xmlns:local="using:AppUIBasics"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
     <StackPanel>
         <local:ControlExample Name="Example1" HeaderText="A BitmapIcon with a multicolor bitmap image">
@@ -43,7 +42,7 @@
                 <StackPanel>
                     <TextBlock Text="To use an ImageIcon as the icon for a control, you can set image that has a file format supported by the Image class. The two examples here show a PNG and SVG image as the icon." Style="{ThemeResource BodyTextBlockStyle}" Margin="0,0,0,12"  />
                     <Button Name="ImageExample1" Width="100">
-                        <muxc:ImageIcon Source="/Assets/slices.png"/>
+                        <ImageIcon Source="/Assets/slices.png"/>
                     </Button>
                 </StackPanel>
             </local:ControlExample.Example>
@@ -51,7 +50,7 @@
         <local:ControlExample Name="Example4" HeaderText="A ImageIcon using a SVG image in a button" XamlSource="Icons/ImageIconSample2_xaml.txt">
             <local:ControlExample.Example>
                 <Button Name="ImageExample2">
-                    <muxc:ImageIcon Source="https://raw.githubusercontent.com/DiemenDesign/LibreICONS/master/svg-color/libre-camera-panorama.svg" Width="50"/>
+                    <ImageIcon Source="https://raw.githubusercontent.com/DiemenDesign/LibreICONS/master/svg-color/libre-camera-panorama.svg" Width="50"/>
                 </Button>
             </local:ControlExample.Example>
         </local:ControlExample>

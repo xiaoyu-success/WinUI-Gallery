@@ -14,8 +14,8 @@ color-changing rectangle besides it. -->
                     Height="175"
                     Width="250"
                     ViewChanging="Animated_ScrollViewer_ViewChanging">
-        <muxc:ItemsRepeater x:Name="animatedScrollRepeater" >
-            <muxc:ItemsRepeater.ItemTemplate>
+        <ItemsRepeater x:Name="animatedScrollRepeater" >
+            <ItemsRepeater.ItemTemplate>
                 <DataTemplate x:DataType="x:String">
                     <Button Content="{x:Bind}"
                             Background="{x:Bind}"
@@ -25,8 +25,8 @@ color-changing rectangle besides it. -->
                             Loaded="GetButtonSize"
                             Foreground="{ThemeResource ButtonForeground}"/>
                 </DataTemplate>
-            </muxc:ItemsRepeater.ItemTemplate>
-        </muxc:ItemsRepeater>
+            </ItemsRepeater.ItemTemplate>
+        </ItemsRepeater>
     </ScrollViewer>
 
     <Rectangle x:Name="colorRectangle"

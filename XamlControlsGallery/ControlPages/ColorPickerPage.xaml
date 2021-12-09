@@ -3,11 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:AppUIBasics"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:muxc="using:Microsoft.UI.Xaml.Controls" mc:Ignorable="d">
+        mc:Ignorable="d">
     <StackPanel>
         <local:ControlExample x:Name="Example1" HeaderText="ColorPicker Properties." HorizontalContentAlignment="Left">
 
-            <muxc:ColorPicker x:Name="colorPicker"
+            <ColorPicker x:Name="colorPicker"
                 IsMoreButtonVisible="{x:Bind moreBtn.IsChecked.Value, Mode=OneWay}"
                 IsColorSliderVisible="{x:Bind colorSlider.IsChecked.Value, Mode=OneWay}"
                 IsColorChannelTextInputVisible="{x:Bind colorChannelInput.IsChecked.Value, Mode=OneWay}"
@@ -27,18 +27,18 @@
                                     IsEnabled="{x:Bind alpha.IsChecked.Value, Mode=OneWay}" />
                     <CheckBox Content="IsAlphaTextInputVisible" x:Name="alphaTextInput"
                                     IsEnabled="{x:Bind alpha.IsChecked.Value, Mode=OneWay}" IsChecked="True" />
-                    <muxc:RadioButtons x:Name="ColorSpectrumShapeRadioButtons"
+                    <RadioButtons x:Name="ColorSpectrumShapeRadioButtons"
                             Header="Colorspectrum shape" SelectedIndex="0"
                             SelectionChanged="ColorSpectrumShapeRadioButtons_SelectionChanged">
                         <x:String>Box</x:String>
                         <x:String>Ring</x:String>
-                    </muxc:RadioButtons>
-                    <muxc:RadioButtons x:Name="ColorSpectrumOrientationRadioButtons"
+                    </RadioButtons>
+                    <RadioButtons x:Name="ColorSpectrumOrientationRadioButtons"
                             Header="Orientation" SelectedIndex="0"
                             SelectionChanged="ColorSpectrumOrientationRadioButtons_SelectionChanged">
                         <x:String>Vertical</x:String>
                         <x:String>Horizontal</x:String>
-                    </muxc:RadioButtons>
+                    </RadioButtons>
                     <StackPanel Margin="0,12,0,0">
                         <TextBlock Text="ColorPicker applied on a Rectangle" />
                         <Rectangle x:Name="previewRect" Height="100" Margin="0,12,0,0" StrokeThickness="1"
@@ -53,7 +53,7 @@
 
             <local:ControlExample.Xaml>
                 <x:String xml:space="preserve">
-&lt;muxc:ColorPicker
+&lt;ColorPicker
       ColorSpectrumShape="$(ColorSpectrumShape)"
       IsMoreButtonVisible="$(IsMoreButtonVisible)"
       IsColorSliderVisible="$(IsColorSliderVisible)"

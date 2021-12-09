@@ -5,7 +5,6 @@
     xmlns:local="using:AppUIBasics"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <StackPanel>
@@ -19,10 +18,10 @@
             
             <local:ControlExample.Options>
                 <StackPanel Width="180">
-                    <muxc:RadioButtons Header="Pen tip" Margin="0,5,0,0">
+                    <RadioButtons Header="Pen tip" Margin="0,5,0,0">
                         <RadioButton x:Name="penTipShape" Checked="PenTip_Checked" Content="Circle" IsChecked="True"></RadioButton>
                         <RadioButton Checked="PenTip_Checked" Content="Rectangle"></RadioButton>
-                    </muxc:RadioButtons>
+                    </RadioButtons>
                     <Button x:Name="clearAll" Content="Clear All" Click="clearAll_Click" Margin="0,8,0,0" />
                 </StackPanel>
             </local:ControlExample.Options>
