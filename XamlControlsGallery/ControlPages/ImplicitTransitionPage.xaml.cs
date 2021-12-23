@@ -1,4 +1,3 @@
-using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Numerics;
 using Windows.Foundation.Metadata;
